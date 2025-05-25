@@ -34,3 +34,7 @@ Also, you may purchase a domain name server (DNS) register to point to your new 
 Do note that you must retrieve an SSL (secure socket layer) certificate to have HTTPs working for your domain name. The NGINX configuration file is meant to be easy to follow and understand. Read it and make sure the certificates are stored in the correct locations with the proper naming schema for NGINX. An easy way to create SSL certificate may be done with openSSL, https://openssl.org/, from the command line or otherwise downloaded from the DNS provider. 
 
 It is highly recommended that you use Cloudflare as they are the leading provider of a register for hosting a DNS. You may review their documentation here https://developers.cloudflare.com/learning-paths/get-started/ at your leisure.
+
+# Credits
+
+I shall note that I must give credit to https://icons8.com/icons for hosting it's service regarding favorite icons.
