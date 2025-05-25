@@ -1,0 +1,138 @@
+/* Base styles for the top navigation */
+.topnav {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    background-color: #609dd5;  /* Background color */
+    padding: 0 10px;         /* Side padding */
+}
+
+/* Navigation links */
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Active link styling */
+.topnav a.active {
+    background-color: #ddd;
+    color: white;
+}
+
+/* Hover effect for links */
+.topnav a:hover {
+    background-color: #ddd;
+    color: #000;
+    transform: scale(1.05); /* Slight enlargement */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Push the last element (if needed) to the far right on larger screens */
+.topnav a:last-child {
+    margin-left: auto;
+}
+
+/* Beveled image styles */
+.beveled-image {
+    width: 300px; /* Fixed width */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 20px auto;
+    border: 5px solid #ccc;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Footer ticker at the bottom */
+.footer-ticker {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1000; /* Stays on top of other content */
+    box-sizing: border-box;
+    margin: 0; /* Removes default margin */
+}
+
+/* Ticker content that scrolls */
+.ticker-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker 20s linear infinite;
+}
+
+/* Animate ticker from right to left */
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Smooth scrolling when clicking content list items */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+}
+
+/* Contents list basic styling */
+#contents ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Contents list item spacing */
+#contents li {
+    margin-bottom: 10px;
+}
+
+/* Styling for links inside the contents section */
+#contents a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+#contents a:hover {
+    text-decoration: underline;
+}
+
+/* Section spacing */
+section {
+    margin-top: 50px;
+}
+
+/* Mobile responsive: Vertical stacking for the navigation */
+@media screen and (max-width: 600px) {
+    .topnav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch;   /* Make each link fill the container width */
+        padding: 0;             /* Adjust padding on mobile if necessary */
+    }
+    
+    .topnav a {
+        display: block;
+        text-align: left;       /* Left-align text or use center for a different style */
+        padding: 12px;          /* Adjust link padding for easier tapping */
+        margin: 0;              /* Remove any margin that might disrupt the layout */
+        border-bottom: 1px solid #ddd;  /* Optional divider between links */
+    }
+    
+    /* Remove the extra margin on the last child and its divider line */
+    .topnav a:last-child {
+        margin-left: 0;
+        border-bottom: none;
+    }
+}
