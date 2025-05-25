@@ -25,7 +25,7 @@ Whatever changes you may make to the NGINX configuration or static file path can
 > nginx -t
 > service nginx reload
 
-I included a template NGINX configuration file https://github.com/kandrsn99/Personal-Web-Page/blob/main/nginx.conf that you may use, please read through it carefully. Remember, the exact file paths matter during the initial set up.
+I included a template NGINX configuration file https://github.com/kandrsn99/Personal-Web-Page/blob/main/nginx.conf that you may use, please read through it carefully. Remember, the exact file paths matter during the initial set up. Typically, anything that came with installation will be in the path /usr/local/etc/nginx.
 
 You may check your HTML via web hosting service on http://localhost:80/ or the server address on http://address:80/
 
